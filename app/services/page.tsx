@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Code, Terminal, Bot, Cloud } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -13,6 +14,7 @@ const services = [
     icon: Cloud,
     tags: ["Microservices", "Scalability", "Identity Management"],
     price: "From $12k",
+    projectLink: "/projects/dataflow-scraping"
   },
   {
     title: "Web Applications",
@@ -20,6 +22,7 @@ const services = [
     icon: Code,
     tags: ["React/Next.js", "GSAP/Framer", "Performance Optimization"],
     price: "From $8k",
+    projectLink: "/projects/care-connect"
   },
   {
     title: "Automation Engines",
@@ -27,6 +30,7 @@ const services = [
     icon: Terminal,
     tags: ["CI/CD", "Infrastructure as Code", "Custom CLI"],
     price: "From $5k",
+    projectLink: "/projects/whatsapp-ai-agent"
   },
   {
     title: "AI Integrations",
@@ -34,6 +38,7 @@ const services = [
     icon: Bot,
     tags: ["LLM Fine-tuning", "RAG", "Predictive Modeling"],
     price: "From $15k",
+    projectLink: "/projects/agrivaani-ai"
   },
 ];
 
@@ -84,12 +89,14 @@ export default function ServicesPage() {
                 </div>
                 <div className="flex items-center justify-between pt-12 border-t border-white/5">
                   <span className="text-2xl font-headline font-black text-primary italic uppercase tracking-widest">{service.price}</span>
-                  <motion.button 
-                    whileHover={{ x: 10 }}
-                    className="flex items-center gap-4 text-xs font-black uppercase tracking-[0.3em] text-white group-hover:text-primary transition-colors"
-                  >
-                    Start Project <ArrowUpRight className="w-6 h-6" />
-                  </motion.button>
+                  <Link href={service.projectLink}>
+                    <motion.button 
+                      whileHover={{ x: 10 }}
+                      className="flex items-center gap-4 text-xs font-black uppercase tracking-[0.3em] text-white group-hover:text-primary transition-colors"
+                    >
+                      View Case Study <ArrowUpRight className="w-6 h-6" />
+                    </motion.button>
+                  </Link>
                 </div>
               </motion.div>
             ))}
