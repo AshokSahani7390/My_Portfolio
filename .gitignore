@@ -32,3 +32,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# agents & local config
+.agent/
+.antigravity/
+AGENTS.md
+CLAUDE.md
+*.txt
+*.log
