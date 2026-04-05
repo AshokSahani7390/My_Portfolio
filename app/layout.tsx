@@ -18,8 +18,6 @@ export const metadata: Metadata = {
   description: "Transforming complex logic into high-end digital experiences.",
 };
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,6 +29,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} antialiased bg-surface text-on-surface selection:bg-primary selection:text-on-primary-fixed cursor-none`}
       >
+        <div className="bg-mesh" />
         <CustomCursor />
         {children}
       </body>
