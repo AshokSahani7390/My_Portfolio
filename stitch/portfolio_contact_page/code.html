@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | KINETIC_DEV</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#c180ff",
+                        "surface-variant": "#262626",
+                        "on-surface-variant": "#adaaaa",
+                        "on-error-container": "#ffb2b9",
+                        "surface-container-high": "#201f1f",
+                        "on-primary-fixed-variant": "#0e009d",
+                        "surface-bright": "#2c2c2c",
+                        "surface-container-highest": "#262626",
+                        "surface": "#0e0e0e",
+                        "on-tertiary-fixed": "#00363e",
+                        "on-tertiary-fixed-variant": "#005561",
+                        "tertiary-dim": "#1ad0eb",
+                        "outline-variant": "#494847",
+                        "surface-container": "#1a1919",
+                        "on-secondary-fixed": "#4f0089",
+                        "on-tertiary-container": "#004b56",
+                        "primary-dim": "#6063ee",
+                        "on-secondary": "#33005b",
+                        "on-tertiary": "#005561",
+                        "on-error": "#490013",
+                        "error": "#ff6e84",
+                        "on-secondary-fixed-variant": "#7511c3",
+                        "error-container": "#a70138",
+                        "tertiary": "#7de9ff",
+                        "primary-container": "#9396ff",
+                        "surface-tint": "#a3a6ff",
+                        "tertiary-fixed-dim": "#1ad0eb",
+                        "primary": "#a3a6ff",
+                        "inverse-surface": "#fcf8f8",
+                        "secondary-fixed-dim": "#dbb4ff",
+                        "error-dim": "#d73357",
+                        "primary-fixed": "#9396ff",
+                        "secondary-fixed": "#e5c6ff",
+                        "on-primary-fixed": "#000000",
+                        "on-secondary-container": "#e9cdff",
+                        "surface-container-low": "#131313",
+                        "secondary-dim": "#9c48ea",
+                        "background": "#0e0e0e",
+                        "primary-fixed-dim": "#8387ff",
+                        "outline": "#777575",
+                        "inverse-on-surface": "#565554",
+                        "tertiary-container": "#3adffa",
+                        "secondary-container": "#6f00be",
+                        "on-primary-container": "#0a0081",
+                        "inverse-primary": "#494bd7",
+                        "on-background": "#ffffff",
+                        "tertiary-fixed": "#3adffa",
+                        "on-surface": "#ffffff",
+                        "surface-dim": "#0e0e0e",
+                        "on-primary": "#0f00a4",
+                        "surface-container-lowest": "#000000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .clay-inset {
+            box-shadow: inset 2px 2px 4px rgba(0,0,0,0.4), inset -2px -2px 4px rgba(255,255,255,0.05);
+        }
+        .clay-button {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.2);
+        }
+        .glass-card {
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="bg-surface/40 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-[0_8px_32px_0_rgba(99,102,241,0.08)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-white">KINETIC_DEV</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-space-grotesk tracking-tight uppercase text-sm font-bold text-slate-400 hover:text-white transition-colors hover:scale-105 hover:bg-white/5 p-2 rounded-lg" href="#">Home</a>
+<a class="font-space-grotesk tracking-tight uppercase text-sm font-bold text-slate-400 hover:text-white transition-colors hover:scale-105 hover:bg-white/5 p-2 rounded-lg" href="#">Projects</a>
+<a class="font-space-grotesk tracking-tight uppercase text-sm font-bold text-slate-400 hover:text-white transition-colors hover:scale-105 hover:bg-white/5 p-2 rounded-lg" href="#">Services</a>
+<a class="font-space-grotesk tracking-tight uppercase text-sm font-bold text-slate-400 hover:text-white transition-colors hover:scale-105 hover:bg-white/5 p-2 rounded-lg" href="#">About</a>
+<a class="font-space-grotesk tracking-tight uppercase text-sm font-bold text-indigo-400 border-b-2 border-indigo-500 pb-1" href="#">Contact</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-dim text-on-primary px-6 py-2 rounded-xl font-bold uppercase text-xs tracking-widest clay-button transition-all hover:scale-105">
+                Hire Me
+            </button>
+</div>
+</nav>
+<main class="relative overflow-hidden min-h-screen">
+<!-- Hero Decorative Background -->
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-primary/5 via-transparent to-transparent -z-10"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary/10 rounded-full blur-[120px] -z-10"></div>
+<section class="max-w-7xl mx-auto px-6 py-24 md:py-32">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Left Content: Brand & Info -->
+<div class="lg:col-span-5 space-y-12">
+<header>
+<h1 class="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter leading-none mb-6">
+                            LET'S <span class="text-primary italic">BUILD</span> THE FUTURE.
+                        </h1>
+<p class="text-on-surface-variant text-lg max-w-md leading-relaxed">
+                            Have a project in mind? Or just want to say hello? Drop a message and let's start a kinetic conversation.
+                        </p>
+</header>
+<div class="space-y-8">
+<div class="flex items-center gap-6 group">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary border-r-4 border-b-4 border-primary/20 group-hover:border-primary transition-all">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+</div>
+<div>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Email Me</p>
+<p class="text-xl font-headline font-bold">hello@kinetic-architect.dev</p>
+</div>
+</div>
+<div class="flex items-center gap-6 group">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary border-r-4 border-b-4 border-secondary/20 group-hover:border-secondary transition-all">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Location</p>
+<p class="text-xl font-headline font-bold">Remote / Global</p>
+</div>
+</div>
+</div>
+<div class="pt-8">
+<p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold mb-4">Social Ecosystem</p>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</a>
+<a class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+<a class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Right Content: The Form -->
+<div class="lg:col-span-7">
+<div class="bg-surface-container-high p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden shadow-2xl border-r-4 border-b-4 border-primary">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[100px]"></div>
+<form class="space-y-8 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest px-2 text-on-surface-variant">Your Name</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl p-4 text-on-surface focus:ring-2 focus:ring-secondary clay-inset transition-all placeholder:text-surface-variant" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest px-2 text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl p-4 text-on-surface focus:ring-2 focus:ring-secondary clay-inset transition-all placeholder:text-surface-variant" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest px-2 text-on-surface-variant">Project Type</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-xl p-4 text-on-surface focus:ring-2 focus:ring-secondary clay-inset transition-all appearance-none cursor-pointer">
+<option>SaaS Development</option>
+<option>Web Application</option>
+<option>Automation Workflow</option>
+<option>AI Integration</option>
+<option>Branding &amp; Design</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest px-2 text-on-surface-variant">Message</label>
+<textarea class="w-full bg-surface-container-lowest border-none rounded-xl p-4 text-on-surface focus:ring-2 focus:ring-secondary clay-inset transition-all placeholder:text-surface-variant" placeholder="Tell me about your vision..." rows="4"></textarea>
+</div>
+<button class="w-full group relative bg-gradient-to-br from-primary to-primary-dim text-on-primary py-5 rounded-2xl font-headline font-black text-xl uppercase tracking-tighter flex items-center justify-center gap-3 clay-button hover:scale-[1.02] active:scale-95 transition-all" type="submit">
+<span>Send Message</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="send">send</span>
+</button>
+<!-- Success State Placeholder (Hidden by default in real flow, but visible here as requested) -->
+<div class="mt-6 p-4 bg-primary/10 rounded-xl border border-primary/20 flex items-center gap-3 text-primary hidden">
+<span class="material-symbols-outlined" data-icon="check_circle" data-weight="fill">check_circle</span>
+<span class="text-sm font-bold">Message sent! We'll be in touch shortly.</span>
+</div>
+</form>
+</div>
+<!-- Decorative Map/Visual element below form -->
+<div class="mt-8 grid grid-cols-2 gap-4">
+<div class="h-32 bg-surface-container rounded-3xl relative overflow-hidden group">
+<img class="w-full h-full object-cover opacity-30 grayscale group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700" data-alt="high-tech digital world map with glowing connections on dark background representing global reach" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXJF_O8_xnnIy9YzvkzsHCL_6WgVgo535keJS0EMGaP8VSc8dkilc-x4CK6tQnCSVoyoLtg_2qughRSl1HYTyZmC0bIeFAxp2WQDePfBmVzppID6hAJRilDUwNFM4dzeaxRtAUvjWiiGLVu9HpePo_nh4uOl6GD-GRi5-QWljbdLrWKKyx_ZltnRSxyp_TGrgO17GILbY2SOK7ok3aqzN2bB4vK2X4LYdmcfWviLwNe8CMnWqDlDyMHcaaJP8pwlcyIl24yZNhflY"/>
+<div class="absolute inset-0 flex flex-col justify-end p-4">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">Service Area</span>
+<span class="text-sm font-bold">Global / Remote</span>
+</div>
+</div>
+<div class="h-32 bg-surface-container rounded-3xl relative overflow-hidden group">
+<img class="w-full h-full object-cover opacity-30 grayscale group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700" data-alt="macro view of server cooling system with blue lights reflecting off metallic surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg5mTwQ1GAbtffuy3fPsynTjnOjSw-unbafB55TH_rEi_sRV7SUTkiNHHAC3_uRWRi1P_bRNx1S3ygIryNYGromA38d680stWRnA33TM407UeqikJ6Fj46Bn-AqTzaV9UZPcXynVhxX-BXoGlpXor33qalTupu-GpLhH6iJOSYWSb-OKHEmpBuHdlMeNwU2NISInsN-iowmdTzSg24LaPCD2FGwXTBZEDK76zCQeTYFbGZuclDcUmdgjDGVdHPlyWkcFpkj76NM_M"/>
+<div class="absolute inset-0 flex flex-col justify-end p-4">
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary">Response Time</span>
+<span class="text-sm font-bold">&lt; 24 Hours</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-black full-width relative border-t border-white/5 pt-40">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-24 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="font-space-grotesk text-xl font-bold text-white uppercase tracking-widest">KINETIC ARCHITECT</div>
+<p class="font-inter text-sm leading-relaxed text-slate-500 max-w-xs">
+                    Building premium digital experiences where technical logic meets high-end editorial aesthetics.
+                </p>
+</div>
+<div class="space-y-6">
+<h4 class="text-white font-bold text-xs uppercase tracking-widest">Expertise</h4>
+<ul class="space-y-4">
+<li><a class="font-inter text-sm leading-relaxed text-slate-500 hover:text-indigo-400 transition-colors duration-200" href="#">SaaS Development</a></li>
+<li><a class="font-inter text-sm leading-relaxed text-slate-500 hover:text-indigo-400 transition-colors duration-200" href="#">Web Apps</a></li>
+<li><a class="font-inter text-sm leading-relaxed text-slate-500 hover:text-indigo-400 transition-colors duration-200" href="#">Automation</a></li>
+<li><a class="font-inter text-sm leading-relaxed text-slate-500 hover:text-indigo-400 transition-colors duration-200" href="#">AI Integrations</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-white font-bold text-xs uppercase tracking-widest">Connect</h4>
+<ul class="space-y-4">
+<li><a class="font-inter text-sm leading-relaxed text-slate-500 hover:text-indigo-400 transition-colors duration-200" href="#">LinkedIn</a></li>
+<li><a class="font-inter text-sm leading-relaxed text-slate-500 hover:text-indigo-400 transition-colors duration-200" href="#">GitHub</a></li>
+<li><a class="font-inter text-sm leading-relaxed text-slate-500 hover:text-indigo-400 transition-colors duration-200" href="#">Twitter</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-white font-bold text-xs uppercase tracking-widest">Status</h4>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span class="text-xs font-bold text-slate-400">Available for hire</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 pb-12">
+<div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between gap-6">
+<p class="font-inter text-xs text-slate-600">© 2024 KINETIC ARCHITECT. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8">
+<a class="text-xs text-slate-600 hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-600 hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

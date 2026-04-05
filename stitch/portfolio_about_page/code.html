@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#c180ff",
+                        "surface-variant": "#262626",
+                        "on-surface-variant": "#adaaaa",
+                        "on-error-container": "#ffb2b9",
+                        "surface-container-high": "#201f1f",
+                        "on-primary-fixed-variant": "#0e009d",
+                        "surface-bright": "#2c2c2c",
+                        "surface-container-highest": "#262626",
+                        "surface": "#0e0e0e",
+                        "on-tertiary-fixed": "#00363e",
+                        "on-tertiary-fixed-variant": "#005561",
+                        "tertiary-dim": "#1ad0eb",
+                        "outline-variant": "#494847",
+                        "surface-container": "#1a1919",
+                        "on-secondary-fixed": "#4f0089",
+                        "on-tertiary-container": "#004b56",
+                        "primary-dim": "#6063ee",
+                        "on-secondary": "#33005b",
+                        "on-tertiary": "#005561",
+                        "on-error": "#490013",
+                        "error": "#ff6e84",
+                        "on-secondary-fixed-variant": "#7511c3",
+                        "error-container": "#a70138",
+                        "tertiary": "#7de9ff",
+                        "primary-container": "#9396ff",
+                        "surface-tint": "#a3a6ff",
+                        "tertiary-fixed-dim": "#1ad0eb",
+                        "primary": "#a3a6ff",
+                        "inverse-surface": "#fcf8f8",
+                        "secondary-fixed-dim": "#dbb4ff",
+                        "error-dim": "#d73357",
+                        "primary-fixed": "#9396ff",
+                        "secondary-fixed": "#e5c6ff",
+                        "on-primary-fixed": "#000000",
+                        "on-secondary-container": "#e9cdff",
+                        "surface-container-low": "#131313",
+                        "secondary-dim": "#9c48ea",
+                        "background": "#0e0e0e",
+                        "primary-fixed-dim": "#8387ff",
+                        "outline": "#777575",
+                        "inverse-on-surface": "#565554",
+                        "tertiary-container": "#3adffa",
+                        "secondary-container": "#6f00be",
+                        "on-primary-container": "#0a0081",
+                        "inverse-primary": "#494bd7",
+                        "on-background": "#ffffff",
+                        "tertiary-fixed": "#3adffa",
+                        "on-surface": "#ffffff",
+                        "surface-dim": "#0e0e0e",
+                        "on-primary": "#0f00a4",
+                        "surface-container-lowest": "#000000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(26, 25, 25, 0.4);
+            backdrop-filter: blur(12px);
+        }
+        .kinetic-gradient-text {
+            background: linear-gradient(135deg, #a3a6ff 0%, #6063ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="bg-surface/40 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-[0_8px_32px_0_rgba(99,102,241,0.08)]">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-white">KINETIC_DEV</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-space-grotesk tracking-tight uppercase text-sm font-bold text-slate-400 hover:text-white transition-colors hover:scale-105" href="#">Home</a>
+<a class="font-space-grotesk tracking-tight uppercase text-sm font-bold text-slate-400 hover:text-white transition-colors hover:scale-105" href="#">Projects</a>
+<a class="font-space-grotesk tracking-tight uppercase text-sm font-bold text-slate-400 hover:text-white transition-colors hover:scale-105" href="#">Services</a>
+<a class="font-space-grotesk tracking-tight uppercase text-sm font-bold text-indigo-400 border-b-2 border-indigo-500 pb-1 hover:scale-105" href="#">About</a>
+<a class="font-space-grotesk tracking-tight uppercase text-sm font-bold text-slate-400 hover:text-white transition-colors hover:scale-105" href="#">Contact</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-dim px-6 py-2 rounded-xl font-bold text-on-primary-fixed shadow-lg hover:scale-105 transition-all">Hire Me</button>
+</nav>
+</header>
+<main>
+<!-- Hero Section / Professional Bio -->
+<section class="relative px-8 pt-32 pb-40 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-20 items-start">
+<div class="w-full md:w-1/2">
+<h1 class="font-headline text-7xl md:text-8xl font-black tracking-tighter leading-none mb-12 animate-fade-in">
+                        BUILDING <br/> <span class="kinetic-gradient-text">DIGITAL</span> <br/> STRUCTURES.
+                    </h1>
+<div class="max-w-xl space-y-6 text-on-surface-variant text-lg leading-relaxed">
+<p>
+                            I am a Full-Stack Logic Architect. My journey began at the intersection of structural engineering and digital canvases—a space where precision meets pure creativity. I don't just write code; I design systems that breathe, scale, and endure.
+                        </p>
+<p>
+                            My philosophy is rooted in **Material Honesty**. Every component should have a purpose, every animation a physics-based reason, and every line of code a mathematical elegance. I transform complex business logic into high-end editorial experiences.
+                        </p>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative group">
+<div class="absolute inset-0 bg-primary/20 blur-[120px] rounded-full -z-10 group-hover:bg-primary/30 transition-all duration-700"></div>
+<div class="aspect-square rounded-3xl overflow-hidden border-r-4 border-b-4 border-primary bg-surface-container-high p-4">
+<img alt="Professional Developer" class="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-1000" data-alt="Close up cinematic portrait of a creative professional in dark minimalist clothing against a deep textured background with dramatic side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkQ_RL_RCp9uikwQ8rj2u-7DpmeiAvOLSFFF6jMnMraRRvvzqwD-EUgTdguhjGEGuvrP-JEHMC2crvfjsPXN-040gQ4rSC-BDIpH3JWNh-gf-rpKBJW9N5XtB-jmBGikRXw4ZZiFeQy9p-eZ3XFUxlTvrvp_LBEg_7pWlyZFpy2RasUbkIIIxDw8vKu6TvuBrocgyW9flmOW40eYphSEjI7-vuD1_i-7SVH6udVvEwV31JMMaDo6FsZlB3sNJC7xfdZdJzU8hyCjY"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Stack Section -->
+<section class="py-40 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
+<h2 class="font-headline text-5xl font-bold tracking-tight">THE TECH <br/><span class="text-secondary">ECOSYSTEM</span></h2>
+<p class="max-w-md text-on-surface-variant font-medium">A modular stack designed for performance, scalability, and seamless user interaction.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<!-- Icon Card -->
+<div class="surface-container rounded-2xl p-8 flex flex-col items-center gap-4 hover:bg-white/5 hover:-translate-y-2 transition-all duration-300 border-r-2 border-b-2 border-outline-variant/30 group">
+<span class="material-symbols-outlined text-5xl text-primary group-hover:scale-110 transition-transform" data-icon="alt_route"></span>
+<span class="font-headline font-bold text-sm tracking-widest uppercase">Next.js</span>
+</div>
+<div class="surface-container rounded-2xl p-8 flex flex-col items-center gap-4 hover:bg-white/5 hover:-translate-y-2 transition-all duration-300 border-r-2 border-b-2 border-outline-variant/30 group">
+<span class="material-symbols-outlined text-5xl text-primary group-hover:scale-110 transition-transform" data-icon="token"></span>
+<span class="font-headline font-bold text-sm tracking-widest uppercase">React</span>
+</div>
+<div class="surface-container rounded-2xl p-8 flex flex-col items-center gap-4 hover:bg-white/5 hover:-translate-y-2 transition-all duration-300 border-r-2 border-b-2 border-outline-variant/30 group">
+<span class="material-symbols-outlined text-5xl text-primary group-hover:scale-110 transition-transform" data-icon="javascript"></span>
+<span class="font-headline font-bold text-sm tracking-widest uppercase">Node.js</span>
+</div>
+<div class="surface-container rounded-2xl p-8 flex flex-col items-center gap-4 hover:bg-white/5 hover:-translate-y-2 transition-all duration-300 border-r-2 border-b-2 border-outline-variant/30 group">
+<span class="material-symbols-outlined text-5xl text-primary group-hover:scale-110 transition-transform" data-icon="terminal"></span>
+<span class="font-headline font-bold text-sm tracking-widest uppercase">Python</span>
+</div>
+<div class="surface-container rounded-2xl p-8 flex flex-col items-center gap-4 hover:bg-white/5 hover:-translate-y-2 transition-all duration-300 border-r-2 border-b-2 border-outline-variant/30 group">
+<span class="material-symbols-outlined text-5xl text-primary group-hover:scale-110 transition-transform" data-icon="cloud"></span>
+<span class="font-headline font-bold text-sm tracking-widest uppercase">AWS</span>
+</div>
+<div class="surface-container rounded-2xl p-8 flex flex-col items-center gap-4 hover:bg-white/5 hover:-translate-y-2 transition-all duration-300 border-r-2 border-b-2 border-outline-variant/30 group">
+<span class="material-symbols-outlined text-5xl text-primary group-hover:scale-110 transition-transform" data-icon="database"></span>
+<span class="font-headline font-bold text-sm tracking-widest uppercase">SQL</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="py-40">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-4 sticky top-32 h-fit">
+<h2 class="font-headline text-5xl font-bold tracking-tight mb-6">THE <br/> CHRONOLOGY</h2>
+<div class="h-1 w-20 bg-primary"></div>
+<p class="mt-8 text-on-surface-variant">Charting the evolution of architectural logic across diverse industries and complex challenges.</p>
+</div>
+<div class="md:col-span-8 space-y-24">
+<!-- Timeline Item -->
+<div class="relative pl-12 border-l-2 border-outline-variant group">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-surface shadow-[0_0_15px_rgba(163,166,255,0.5)]"></div>
+<span class="font-headline text-sm font-bold text-primary mb-2 block tracking-widest">2022 — PRESENT</span>
+<h3 class="text-3xl font-black mb-4">Senior Architectural Developer</h3>
+<p class="text-xl text-on-surface-variant font-medium mb-6">Leading the digital transformation at Kinetic Solutions, focusing on microservices and high-fidelity UI systems.</p>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-1.5 rounded-full bg-surface-variant text-xs font-bold uppercase tracking-wider">Kubernetes</span>
+<span class="px-4 py-1.5 rounded-full bg-surface-variant text-xs font-bold uppercase tracking-wider">GoLang</span>
+<span class="px-4 py-1.5 rounded-full bg-surface-variant text-xs font-bold uppercase tracking-wider">Next.js</span>
+</div>
+</div>
+<div class="relative pl-12 border-l-2 border-outline-variant group">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-surface-container-highest border-2 border-outline-variant ring-4 ring-surface group-hover:bg-secondary transition-colors"></div>
+<span class="font-headline text-sm font-bold text-on-surface-variant mb-2 block tracking-widest">2019 — 2022</span>
+<h3 class="text-3xl font-black mb-4">Lead Full-Stack Engineer</h3>
+<p class="text-xl text-on-surface-variant font-medium mb-6">Built and scaled a fintech platform from MVP to 100k+ active users, implementing secure transaction architectures.</p>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-1.5 rounded-full bg-surface-variant text-xs font-bold uppercase tracking-wider">React Native</span>
+<span class="px-4 py-1.5 rounded-full bg-surface-variant text-xs font-bold uppercase tracking-wider">Python</span>
+<span class="px-4 py-1.5 rounded-full bg-surface-variant text-xs font-bold uppercase tracking-wider">PostgreSQL</span>
+</div>
+</div>
+<div class="relative pl-12 border-l-2 border-outline-variant group">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-surface-container-highest border-2 border-outline-variant ring-4 ring-surface group-hover:bg-secondary transition-colors"></div>
+<span class="font-headline text-sm font-bold text-on-surface-variant mb-2 block tracking-widest">2017 — 2019</span>
+<h3 class="text-3xl font-black mb-4">UI/UX Designer &amp; Dev</h3>
+<p class="text-xl text-on-surface-variant font-medium mb-6">A dual role bridge between aesthetics and implementation for a leading creative agency.</p>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-1.5 rounded-full bg-surface-variant text-xs font-bold uppercase tracking-wider">Figma</span>
+<span class="px-4 py-1.5 rounded-full bg-surface-variant text-xs font-bold uppercase tracking-wider">Vue.js</span>
+<span class="px-4 py-1.5 rounded-full bg-surface-variant text-xs font-bold uppercase tracking-wider">D3.js</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education & Certifications -->
+<section class="py-40 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="font-headline text-4xl font-bold mb-16 text-center">QUALIFICATIONS</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Edu Card -->
+<div class="surface-container rounded-2xl p-8 border-r-2 border-b-2 border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary text-3xl mb-6" data-icon="school"></span>
+<h4 class="text-xl font-bold mb-2">BSc Software Engineering</h4>
+<p class="text-on-surface-variant text-sm mb-4">University of Technology</p>
+<span class="text-xs font-bold text-primary tracking-widest">GRADUATED WITH HONORS</span>
+</div>
+<!-- Cert Card -->
+<div class="surface-container rounded-2xl p-8 border-r-2 border-b-2 border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary text-3xl mb-6" data-icon="verified"></span>
+<h4 class="text-xl font-bold mb-2">AWS Certified Architect</h4>
+<p class="text-on-surface-variant text-sm mb-4">Amazon Web Services</p>
+<span class="text-xs font-bold text-primary tracking-widest">PROFESSIONAL LEVEL</span>
+</div>
+<!-- Cert Card -->
+<div class="surface-container rounded-2xl p-8 border-r-2 border-b-2 border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary text-3xl mb-6" data-icon="workspace_premium"></span>
+<h4 class="text-xl font-bold mb-2">Google Cloud Dev Professional</h4>
+<p class="text-on-surface-variant text-sm mb-4">Google Professional Certifications</p>
+<span class="text-xs font-bold text-primary tracking-widest">VALID THRU 2025</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-black full-width relative border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-24 max-w-7xl mx-auto font-inter text-sm leading-relaxed">
+<div class="flex flex-col gap-6">
+<div class="font-space-grotesk text-xl font-bold text-white">KINETIC ARCHITECT</div>
+<p class="text-slate-500">© 2024 KINETIC ARCHITECT. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-white font-bold uppercase tracking-widest mb-2">Capabilities</span>
+<a class="text-slate-500 hover:text-indigo-400 transition-colors" href="#">SaaS Development</a>
+<a class="text-slate-500 hover:text-indigo-400 transition-colors" href="#">Web Apps</a>
+<a class="text-slate-500 hover:text-indigo-400 transition-colors" href="#">Automation</a>
+<a class="text-slate-500 hover:text-indigo-400 transition-colors" href="#">AI Integrations</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-white font-bold uppercase tracking-widest mb-2">Social</span>
+<a class="text-slate-500 hover:text-indigo-400 transition-colors" href="#">LinkedIn</a>
+<a class="text-slate-500 hover:text-indigo-400 transition-colors" href="#">GitHub</a>
+<a class="text-slate-500 hover:text-indigo-400 transition-colors" href="#">Twitter</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-white font-bold uppercase tracking-widest mb-2">Hire Me</span>
+<p class="text-slate-500">Ready to start your project? Let's build something exceptional together.</p>
+<a class="text-indigo-400 font-bold hover:underline" href="mailto:hello@kinetic.dev">hello@kinetic.dev</a>
+</div>
+</div>
+</footer>
+</body></html>

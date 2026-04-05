@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KINETIC_DEV | Full-Stack Architect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#c180ff",
+                        "surface-variant": "#262626",
+                        "on-surface-variant": "#adaaaa",
+                        "on-error-container": "#ffb2b9",
+                        "surface-container-high": "#201f1f",
+                        "on-primary-fixed-variant": "#0e009d",
+                        "surface-bright": "#2c2c2c",
+                        "surface-container-highest": "#262626",
+                        "surface": "#0e0e0e",
+                        "on-tertiary-fixed": "#00363e",
+                        "on-tertiary-fixed-variant": "#005561",
+                        "tertiary-dim": "#1ad0eb",
+                        "outline-variant": "#494847",
+                        "surface-container": "#1a1919",
+                        "on-secondary-fixed": "#4f0089",
+                        "on-tertiary-container": "#004b56",
+                        "primary-dim": "#6063ee",
+                        "on-secondary": "#33005b",
+                        "on-tertiary": "#005561",
+                        "on-error": "#490013",
+                        "error": "#ff6e84",
+                        "on-secondary-fixed-variant": "#7511c3",
+                        "error-container": "#a70138",
+                        "tertiary": "#7de9ff",
+                        "primary-container": "#9396ff",
+                        "surface-tint": "#a3a6ff",
+                        "tertiary-fixed-dim": "#1ad0eb",
+                        "primary": "#a3a6ff",
+                        "inverse-surface": "#fcf8f8",
+                        "secondary-fixed-dim": "#dbb4ff",
+                        "error-dim": "#d73357",
+                        "primary-fixed": "#9396ff",
+                        "secondary-fixed": "#e5c6ff",
+                        "on-primary-fixed": "#000000",
+                        "on-secondary-container": "#e9cdff",
+                        "surface-container-low": "#131313",
+                        "secondary-dim": "#9c48ea",
+                        "background": "#0e0e0e",
+                        "primary-fixed-dim": "#8387ff",
+                        "outline": "#777575",
+                        "inverse-on-surface": "#565554",
+                        "tertiary-container": "#3adffa",
+                        "secondary-container": "#6f00be",
+                        "on-primary-container": "#0a0081",
+                        "inverse-primary": "#494bd7",
+                        "on-background": "#ffffff",
+                        "tertiary-fixed": "#3adffa",
+                        "on-surface": "#ffffff",
+                        "surface-dim": "#0e0e0e",
+                        "on-primary": "#0f00a4",
+                        "surface-container-lowest": "#000000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #0e0e0e; color: #ffffff; }
+        .font-space-grotesk { font-family: 'Space Grotesk', sans-serif; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .inner-glow { box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.1); }
+        .clay-input { box-shadow: inset 2px 2px 4px rgba(0,0,0,0.4), inset -1px -1px 2px rgba(255,255,255,0.05); }
+        .perspective-lg { perspective: 1000px; }
+        .rotate-y-12 { transform: rotateY(12deg); }
+        .floating { animation: float 6s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-surface/40 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-[0_8px_32px_0_rgba(99,102,241,0.08)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-white">KINETIC_DEV</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-space-grotesk tracking-tight uppercase text-sm font-bold text-indigo-400 border-b-2 border-indigo-500 pb-1" href="#">Home</a>
+<a class="font-space-grotesk tracking-tight uppercase text-sm font-bold text-slate-400 hover:text-white transition-colors hover:scale-105 hover:bg-white/5 transition-all duration-300 px-2 py-1 rounded" href="#">Projects</a>
+<a class="font-space-grotesk tracking-tight uppercase text-sm font-bold text-slate-400 hover:text-white transition-colors hover:scale-105 hover:bg-white/5 transition-all duration-300 px-2 py-1 rounded" href="#">Services</a>
+<a class="font-space-grotesk tracking-tight uppercase text-sm font-bold text-slate-400 hover:text-white transition-colors hover:scale-105 hover:bg-white/5 transition-all duration-300 px-2 py-1 rounded" href="#">About</a>
+<a class="font-space-grotesk tracking-tight uppercase text-sm font-bold text-slate-400 hover:text-white transition-colors hover:scale-105 hover:bg-white/5 transition-all duration-300 px-2 py-1 rounded" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary-container px-6 py-2.5 rounded-full font-bold uppercase text-xs tracking-widest hover:scale-105 transition-transform inner-glow">Hire Me</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center overflow-hidden bg-surface-container-lowest pt-20">
+<!-- Background Glows -->
+<div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary/10 rounded-full blur-[120px]"></div>
+<div class="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center z-10">
+<div>
+<h1 class="font-space-grotesk text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
+                    Building <span class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-primary-dim">SaaS</span>, Apps, and Automation.
+                </h1>
+<p class="text-on-surface-variant text-xl max-w-lg mb-10 leading-relaxed font-body">
+                    Transforming complex logic into high-end digital experiences that drive exponential business growth.
+                </p>
+<div class="flex flex-wrap gap-6">
+<button class="bg-primary text-on-primary-fixed px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-xl shadow-primary/20">View My Work</button>
+<button class="bg-surface-bright/10 backdrop-blur-md border border-white/10 text-on-surface px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-white/5 transition-all">Get in Touch</button>
+</div>
+</div>
+<!-- 3D Scene Mockup -->
+<div class="relative perspective-lg hidden lg:block">
+<div class="floating relative z-20 transition-transform duration-700 hover:rotate-y-12">
+<div class="bg-surface-container rounded-2xl p-4 border border-white/10 shadow-2xl">
+<img alt="Dashboard Interface" class="rounded-xl w-full h-auto" data-alt="sleek modern dark mode dashboard interface with glowing blue and purple data visualizations and minimalist charts on a 3d laptop screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTZKafP6FIt7CXFIqMDrNtu7fK_BkCLuf0iVr9GX_PxtF5qHOZiIbqU3DVpg3SVNDO4upbSGydbFj0fc94fJ3R5QuMsvZIInrxw1HIFjxIL4CaQn1kbXXSVwjwPUGRXr78hpwBUfhEYq0_4H3JLIuVupbvE0disbMKWk2IsBDfiUmBjNAGALCou-aU2YTFA9l6QhuxRHfNpiXtLpwQhoD9bKPBaP02vV6GBbqUNjkn8zNlit9yHOaHVJtOYsSybIwjsIxtKW7pABE"/>
+</div>
+</div>
+<!-- Floating Mobile Overlay -->
+<div class="absolute -bottom-10 -right-10 w-48 floating z-30 delay-700" style="animation-delay: 1s;">
+<div class="bg-surface-container-high rounded-[2.5rem] p-2 border-4 border-surface-variant shadow-2xl">
+<img alt="Mobile UI" class="rounded-[2rem] w-full h-auto" data-alt="high-end mobile application user interface with neon accents and vibrant purple gradients showing a crypto wallet or fintech app" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj_6eZGAPeIGYYlQoGfWODh46cK_5G5Zd4wYuKqULsk1ZZnCN3M3azyhiPtsRNMrtX9Z9t6D7x2wYAJrG1r1vxhg0SkNx3RzHENkrwbUwGeK_XmmkXfgojf_OCbfsQl-cxoMW17FJWu4QBa-bN76I15IXoojUKVjjL2TV8tcWbUeRrBhyczAgSssQxLK4YfSRG8f5st_1zrkVGvRnkl_SaQPMnjTt6QI-Q1LR8KUFBFT7y6zwulO41CP9oWIi17Bufa9qXn7pF0YE"/>
+</div>
+</div>
+<!-- Floating Icons -->
+<div class="absolute top-0 right-10 floating z-10" style="animation-delay: 0.5s;">
+<span class="material-symbols-outlined text-6xl text-primary/40" style="font-variation-settings: 'FILL' 1;">cloud</span>
+</div>
+<div class="absolute bottom-20 left-0 floating z-10" style="animation-delay: 1.5s;">
+<span class="material-symbols-outlined text-5xl text-secondary/40" style="font-variation-settings: 'FILL' 1;">database</span>
+</div>
+<div class="absolute -top-10 left-1/4 floating z-10" style="animation-delay: 2s;">
+<span class="material-symbols-outlined text-4xl text-tertiary-dim/40" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Clients Section -->
+<section class="py-24 bg-surface border-t border-white/5">
+<div class="max-w-7xl mx-auto px-8">
+<p class="font-space-grotesk text-center text-on-surface-variant text-sm font-bold tracking-[0.2em] uppercase mb-12">Trusted by Next-Gen Startups</p>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all">
+<span class="font-space-grotesk text-2xl font-black">LOGIC_GATE</span>
+<span class="font-space-grotesk text-2xl font-black tracking-widest">QUANTUM</span>
+<span class="font-space-grotesk text-2xl font-black italic underline decoration-primary">FLUX</span>
+<span class="font-space-grotesk text-2xl font-black border-2 border-white px-2">NEXUS</span>
+<span class="font-space-grotesk text-2xl font-black">VELOCITY</span>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-32 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20">
+<span class="text-primary font-space-grotesk font-bold uppercase tracking-widest text-sm block mb-4">Core Expertise</span>
+<h2 class="text-5xl md:text-6xl font-black font-space-grotesk tracking-tighter">Architecture for the <br/>Future Web.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service Cards -->
+<div class="group bg-surface p-10 rounded-2xl border-b-4 border-r-4 border-transparent hover:border-primary transition-all duration-500 hover:-translate-y-2">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">cloud_sync</span>
+<h3 class="text-2xl font-bold font-space-grotesk mb-4">SaaS Development</h3>
+<p class="text-on-surface-variant leading-relaxed">Scalable multi-tenant architectures built with modern cloud-native principles.</p>
+</div>
+<div class="group bg-surface p-10 rounded-2xl border-b-4 border-r-4 border-transparent hover:border-secondary transition-all duration-500 hover:-translate-y-2">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">web_asset</span>
+<h3 class="text-2xl font-bold font-space-grotesk mb-4">Web Apps</h3>
+<p class="text-on-surface-variant leading-relaxed">High-performance, interactive applications focused on speed and user experience.</p>
+</div>
+<div class="group bg-surface p-10 rounded-2xl border-b-4 border-r-4 border-transparent hover:border-tertiary text-4xl transition-all duration-500 hover:-translate-y-2">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-6">smartphone</span>
+<h3 class="text-2xl font-bold font-space-grotesk mb-4">Mobile Apps</h3>
+<p class="text-on-surface-variant leading-relaxed">Cross-platform solutions that feel native and perform beautifully on every device.</p>
+</div>
+<div class="group bg-surface p-10 rounded-2xl border-b-4 border-r-4 border-transparent hover:border-primary transition-all duration-500 hover:-translate-y-2">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">monitoring</span>
+<h3 class="text-2xl font-bold font-space-grotesk mb-4">Dashboards</h3>
+<p class="text-on-surface-variant leading-relaxed">Data-driven interfaces that turn complex information into actionable insights.</p>
+</div>
+<div class="group bg-surface p-10 rounded-2xl border-b-4 border-r-4 border-transparent hover:border-secondary transition-all duration-500 hover:-translate-y-2">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">bolt</span>
+<h3 class="text-2xl font-bold font-space-grotesk mb-4">Automation</h3>
+<p class="text-on-surface-variant leading-relaxed">Workflow optimization using Zapier, Make, and custom-built internal engines.</p>
+</div>
+<div class="group bg-surface p-10 rounded-2xl border-b-4 border-r-4 border-transparent hover:border-tertiary transition-all duration-500 hover:-translate-y-2">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-6">psychology</span>
+<h3 class="text-2xl font-bold font-space-grotesk mb-4">AI Integrations</h3>
+<p class="text-on-surface-variant leading-relaxed">Leveraging LLMs and neural networks to add smart features to your business.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section (Bento Grid) -->
+<section class="py-32 px-8 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="text-secondary font-space-grotesk font-bold uppercase tracking-widest text-sm block mb-4">Selected Works</span>
+<h2 class="text-5xl font-black font-space-grotesk tracking-tighter">Case Studies.</h2>
+</div>
+<button class="text-on-surface hover:text-primary transition-colors flex items-center gap-2 group">
+                    View All Projects <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-full md:h-[1000px]">
+<!-- Main Featured Project -->
+<div class="md:col-span-8 bg-surface-container rounded-3xl overflow-hidden group relative">
+<img alt="Crypto Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="immersive close-up of a futuristic dark finance dashboard with glowing purple candlestick charts and neon holographic elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIKCfhVLUvABbj2O67fuLJIskFek61ES3DdUQ7t8dh1iFxzYmnMM2FammmRAqaAq0d2QW9IOCQ5vdG399Ztm0_Rhuo3ML1xCxc8kFN43VCK-cu3hHB8Ro6Q2Ciydx1TTy9JmmNAnlkKoixitvOqDgjmbTt7Pex48g7NrJLxkxR03ylc9Q8px_MsThkk918X75XBb-P81CkVY25PT758hpm6QCaZ6XByG35-1H-Tu2sS96FbjzbyvktfUyMr9Qfi8dVEQXpYhudSBg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-12 flex flex-col justify-end">
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-1 bg-primary/20 backdrop-blur-md rounded-full text-[10px] uppercase font-bold tracking-widest">Fintech</span>
+<span class="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-[10px] uppercase font-bold tracking-widest">Web3</span>
+</div>
+<h3 class="text-4xl font-bold font-space-grotesk mb-2">Aether Exchange</h3>
+<p class="text-on-surface-variant max-w-md">Revolutionizing decentralized trading with real-time analytics.</p>
+</div>
+</div>
+<!-- Secondary Project 1 -->
+<div class="md:col-span-4 bg-surface-container rounded-3xl overflow-hidden group relative">
+<img alt="Health App" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="top down view of a clean minimalist health tracking mobile app screen with soft shadows and pastel mint green accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa0uLZENyvJEdqe6CGHlkjUFsOC8ZClVGWAjWpEL26fybRu24AVzGJ7cGVyOZGvbehxwSCsfaMLJ4ZFw128Jy1a1BlxcCgpYL4uFbfBK0Z8AAZOaOlrWpIEQ49397W1iP0b1X4IwVNxpbDscFsCI4Wb_5fM204-6LLVOQ5-IOi0fr1-wxY7iJlc64jWUPVxAZnBOIUxnVhzlobloOUHsDb3GZUZPFpLMt24Wig_nN_sbj6Z3nGNdfuA7mhHqmkA7mWYlfct5o6KPY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent p-8 flex flex-col justify-end">
+<h3 class="text-2xl font-bold font-space-grotesk">Vitals AI</h3>
+<p class="text-on-surface-variant text-sm">Predictive health monitoring platform.</p>
+</div>
+</div>
+<!-- Secondary Project 2 -->
+<div class="md:col-span-4 bg-surface-container rounded-3xl overflow-hidden group relative">
+<img alt="Automation Tool" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="dark abstract technical blueprint visualization showing interconnected nodes and neural network lines with glowing blue sparks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXMy0vNnph-88XQ00BQvmq2UM-4NZjCCjz5IBdAYOxqo80Mzmy5zf4n5RGovZ-iYAH2aXN_7XFCcYbdxfFESgqTc4Bs2Yg50__Z27kO-IWl_rgKFqpW6Hb41C_bLQRdEC0mCZqSeptwC3cwYUQDjyJQsIZgivvdnRdqtRBPAVyQgA0SLC1GRzSLDqUlxfRzcnCUGApdhdpSHZqKdWCyFs4tsyl3ErAfQGeEigczBQnOvnCiQ7mUjZpXlnqzWuNTMSkLaYYyHGC5lk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent p-8 flex flex-col justify-end">
+<h3 class="text-2xl font-bold font-space-grotesk">FlowEngine</h3>
+<p class="text-on-surface-variant text-sm">Enterprise-grade automation middleware.</p>
+</div>
+</div>
+<!-- Secondary Project 3 -->
+<div class="md:col-span-8 bg-surface-container rounded-3xl overflow-hidden group relative">
+<img alt="SaaS Tool" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="close up of a modern software interface on a desktop screen showing complex data nodes and high-end typography layout in dark mode" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzsA5npniZApqGryNlpF62CeLdpjc-LuQIfEg3o-FE4hRWkDGafSD2vOGRaKaS5L1GnkUN3WSFtWr-UtbEVca_ezDamwUjbVdzwdMQ53jZkM9sIRjP_94eMpUw3Z8r4ZPdqgu6w-NSs-cvPOabr-cFnI5sjk-ofLEte-F723qs15oRkWfsKjX_nvnTSx2KuhMOUaWiJPJ8_JfeBtRUSwz1y4t31RZdrC_Rz5U-_RNtZTf9gi1BWI6fMdzvE0B2QZ-jvWHnplyfpvY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent p-12 flex flex-col justify-end">
+<h3 class="text-3xl font-bold font-space-grotesk mb-2">Nexus Workspace</h3>
+<p class="text-on-surface-variant">The future of collaborative distributed systems.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-32 px-8 bg-surface-container-lowest overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24">
+<h2 class="text-5xl font-black font-space-grotesk mb-6 tracking-tighter">My Kinetic Process.</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Structured logic combined with creative flexibility ensures projects are delivered with precision and flair.</p>
+</div>
+<div class="relative">
+<!-- Connecting Line (Desktop) -->
+<div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent hidden lg:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-surface-container rounded-2xl flex items-center justify-center mb-8 border border-white/5 shadow-xl transition-all hover:bg-primary/10 hover:border-primary group">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">lightbulb</span>
+</div>
+<h4 class="text-xl font-bold font-space-grotesk mb-2">Idea</h4>
+<p class="text-on-surface-variant text-sm">Deep dive into requirements and business objectives.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-surface-container rounded-2xl flex items-center justify-center mb-8 border border-white/5 shadow-xl transition-all hover:bg-secondary/10 hover:border-secondary group">
+<span class="material-symbols-outlined text-secondary group-hover:scale-110 transition-transform">architecture</span>
+</div>
+<h4 class="text-xl font-bold font-space-grotesk mb-2">Design</h4>
+<p class="text-on-surface-variant text-sm">Crafting high-fidelity mockups and technical architecture.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-surface-container rounded-2xl flex items-center justify-center mb-8 border border-white/5 shadow-xl transition-all hover:bg-tertiary/10 hover:border-tertiary group">
+<span class="material-symbols-outlined text-tertiary group-hover:scale-110 transition-transform">code</span>
+</div>
+<h4 class="text-xl font-bold font-space-grotesk mb-2">Build</h4>
+<p class="text-on-surface-variant text-sm">Clean, scalable code using the latest tech stack.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-surface-container rounded-2xl flex items-center justify-center mb-8 border border-white/5 shadow-xl transition-all hover:bg-primary/10 hover:border-primary group">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">rocket_launch</span>
+</div>
+<h4 class="text-xl font-bold font-space-grotesk mb-2">Deploy</h4>
+<h4 class="text-xl font-bold font-space-grotesk mb-2">Deploy</h4>
+<p class="text-on-surface-variant text-sm">Rigorous testing followed by seamless production launch.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Stack -->
+<section class="py-32 px-8 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-20">
+<div class="w-full md:w-1/2">
+<span class="text-tertiary font-space-grotesk font-bold uppercase tracking-widest text-sm block mb-4">Toolkit</span>
+<h2 class="text-5xl font-black font-space-grotesk mb-8 tracking-tighter">The Weapons of <br/>Choice.</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-10">I leverage cutting-edge frameworks to ensure every application is performant, SEO-friendly, and future-proof.</p>
+<div class="flex flex-wrap gap-4">
+<span class="bg-surface-variant px-5 py-2 rounded-full text-sm font-bold border border-white/5">Next.js</span>
+<span class="bg-surface-variant px-5 py-2 rounded-full text-sm font-bold border border-white/5">Tailwind CSS</span>
+<span class="bg-surface-variant px-5 py-2 rounded-full text-sm font-bold border border-white/5">TypeScript</span>
+<span class="bg-surface-variant px-5 py-2 rounded-full text-sm font-bold border border-white/5">Three.js</span>
+<span class="bg-surface-variant px-5 py-2 rounded-full text-sm font-bold border border-white/5">GSAP</span>
+<span class="bg-surface-variant px-5 py-2 rounded-full text-sm font-bold border border-white/5">Node.js</span>
+<span class="bg-surface-variant px-5 py-2 rounded-full text-sm font-bold border border-white/5">PostgreSQL</span>
+</div>
+</div>
+<div class="w-full md:w-1/2 grid grid-cols-3 gap-6">
+<!-- Tech Icons Visualized -->
+<div class="aspect-square bg-surface-container rounded-3xl flex items-center justify-center hover:scale-105 transition-transform border border-white/5">
+<span class="font-black text-2xl">NEXT</span>
+</div>
+<div class="aspect-square bg-surface-container rounded-3xl flex items-center justify-center hover:scale-105 transition-transform border border-white/5 text-primary">
+<span class="material-symbols-outlined text-4xl">css</span>
+</div>
+<div class="aspect-square bg-surface-container rounded-3xl flex items-center justify-center hover:scale-105 transition-transform border border-white/5">
+<span class="material-symbols-outlined text-4xl text-secondary">view_in_ar</span>
+</div>
+<div class="aspect-square bg-surface-container rounded-3xl flex items-center justify-center hover:scale-105 transition-transform border border-white/5">
+<span class="material-symbols-outlined text-4xl text-tertiary">database</span>
+</div>
+<div class="aspect-square bg-primary rounded-3xl flex items-center justify-center hover:scale-105 transition-transform border border-white/5 text-on-primary-fixed">
+<span class="material-symbols-outlined text-4xl">terminal</span>
+</div>
+<div class="aspect-square bg-surface-container rounded-3xl flex items-center justify-center hover:scale-105 transition-transform border border-white/5">
+<span class="material-symbols-outlined text-4xl text-primary-dim">api</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials & Pricing -->
+<section class="py-32 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<!-- Testimonials -->
+<div>
+<h2 class="text-4xl font-black font-space-grotesk mb-12 tracking-tighter">Client Voices.</h2>
+<div class="space-y-8">
+<div class="bg-surface p-8 rounded-2xl border-l-4 border-primary">
+<p class="text-on-surface-variant italic mb-6">"Kinetic Architect transformed our stagnant SaaS into a high-converting machine. The attention to detail is unrivaled."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-variant rounded-full overflow-hidden">
+<img alt="Client 1" class="w-full h-full object-cover" data-alt="portrait of a confident tech ceo man in a modern office with soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5Kv2lHZTJs0hj4IsQg_N18YCZfFcamJPhYJmzRJxwicMv897Uq5OabFsCsdO6s0DRCzM1hy71VdDQ8w8DIlUl-fQ9rLtWG0kTkUBWxHOyyImzQECRXE8SNlGESR_JvwDGkuBK-5_xnWV-_AxXTfxx4Ea7rd5LW_TK6KJRxaVcBYdiYsAsBqZVhk4jCyuZ6nkEwcbWB-ps5ZthiBiL3N1dF-USMklby1Tfqx39I-jdPZZCzSkY85cagHq-YUqLSQf_F751LkENO-A"/>
+</div>
+<div>
+<h4 class="font-bold text-sm">Marcus Chen</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">CEO, Flux Labs</p>
+</div>
+</div>
+</div>
+<div class="bg-surface p-8 rounded-2xl border-l-4 border-secondary">
+<p class="text-on-surface-variant italic mb-6">"The code is clean, the UI is beautiful, and the communication was perfect. Truly a world-class partner for our agency."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-variant rounded-full overflow-hidden">
+<img alt="Client 2" class="w-full h-full object-cover" data-alt="portrait of a creative director woman with glasses in a vibrant studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiixQPZsqm4qwddXwit6w3NQOOFXhcRdMtgYSOP9z6iRLenb_2t_AW6LwhcR4riJXHlsmdwCb6AC6EnBkqzIFKhdIt2NS-uO7jCUXgmhFWuMb9yNlZqmurKWiHhYSKLMSvwXXPefzunqLe5VHJziY0ONWYSmRmKjTdCwmqWzTbOecKm14jJvo_pUhRWYdyH0iuzwEKpXPzTtHYSwpsxQX21ItgFtKefM1t64awFlzCmVyA4XBxmEpH9YVSWxejiAJl7TAE_g1R8KA"/>
+</div>
+<div>
+<h4 class="font-bold text-sm">Sarah Jenkins</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Creative Director, Nexus</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pricing -->
+<div>
+<h2 class="text-4xl font-black font-space-grotesk mb-12 tracking-tighter">Partnership Models.</h2>
+<div class="bg-surface-container-high rounded-3xl p-10 border border-white/5 shadow-2xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[60px] -mr-10 -mt-10"></div>
+<h3 class="text-2xl font-bold font-space-grotesk mb-2">The Catalyst</h3>
+<p class="text-on-surface-variant mb-8 text-sm">Full execution of a single platform or system.</p>
+<div class="mb-8">
+<span class="text-5xl font-black font-space-grotesk">Custom</span>
+<span class="text-on-surface-variant text-sm">/per project</span>
+</div>
+<ul class="space-y-4 mb-10 text-sm">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> Strategy &amp; Architecture</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> UI/UX High-Fidelity Design</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> Full-Stack Implementation</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> 3 Months Post-Launch Support</li>
+</ul>
+<button class="w-full bg-white text-black py-4 rounded-xl font-bold uppercase tracking-widest text-sm hover:scale-[1.02] transition-all">Request a Quote</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form (Claymorphism Style) -->
+<section class="py-32 px-8 bg-surface">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-5xl font-black font-space-grotesk tracking-tighter mb-4">Start a Project.</h2>
+<p class="text-on-surface-variant">Let's build something that matters.</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-2">Name</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-2xl p-5 clay-input focus:ring-2 focus:ring-primary focus:bg-surface-container transition-all text-on-surface" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-2">Email</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-2xl p-5 clay-input focus:ring-2 focus:ring-primary focus:bg-surface-container transition-all text-on-surface" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-2">Budget Range</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-2xl p-5 clay-input focus:ring-2 focus:ring-primary focus:bg-surface-container transition-all text-on-surface">
+<option>$5k - $10k</option>
+<option>$10k - $25k</option>
+<option>$25k - $50k</option>
+<option>$50k+</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-2">Project Details</label>
+<textarea class="w-full bg-surface-container-lowest border-none rounded-2xl p-5 clay-input focus:ring-2 focus:ring-primary focus:bg-surface-container transition-all text-on-surface" placeholder="Tell me about your vision..." rows="6"></textarea>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-dim text-on-primary-fixed py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-lg shadow-2xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">Send Brief</button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black full-width relative border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-24 max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<div class="font-space-grotesk text-xl font-bold text-white mb-6">KINETIC ARCHITECT</div>
+<p class="font-inter text-sm leading-relaxed text-slate-500 max-w-xs">Building high-performance digital systems for the next generation of industry leaders.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Capabilities</h4>
+<ul class="space-y-4">
+<li><a class="font-inter text-sm text-slate-500 hover:text-indigo-400 transition-colors duration-200" href="#">SaaS Development</a></li>
+<li><a class="font-inter text-sm text-slate-500 hover:text-indigo-400 transition-colors duration-200" href="#">Web Apps</a></li>
+<li><a class="font-inter text-sm text-slate-500 hover:text-indigo-400 transition-colors duration-200" href="#">Automation</a></li>
+<li><a class="font-inter text-sm text-slate-500 hover:text-indigo-400 transition-colors duration-200" href="#">AI Integrations</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Connect</h4>
+<ul class="space-y-4">
+<li><a class="font-inter text-sm text-slate-500 hover:text-indigo-400 transition-colors duration-200" href="#">LinkedIn</a></li>
+<li><a class="font-inter text-sm text-slate-500 hover:text-indigo-400 transition-colors duration-200" href="#">GitHub</a></li>
+<li><a class="font-inter text-sm text-slate-500 hover:text-indigo-400 transition-colors duration-200" href="#">Twitter</a></li>
+</ul>
+</div>
+<div class="flex flex-col justify-between">
+<div class="text-primary font-bold text-sm tracking-widest uppercase">READY TO GROW?</div>
+<div class="font-inter text-sm leading-relaxed text-slate-500">© 2024 KINETIC ARCHITECT. ALL RIGHTS RESERVED.</div>
+</div>
+</div>
+</footer>
+</body></html>
