@@ -12,7 +12,7 @@ const services = [
     title: "SaaS Systems",
     description: "Building scalable, multi-tenant cloud platforms with modern architectural standards and high-fidelity user interfaces.",
     icon: Cloud,
-    tags: ["Microservices", "Scalability", "Identity Management"],
+    tags: ["Supabase", "Clerk", "Vercel", "GitHub"],
     price: "From $12k",
     projectLink: "/projects/dataflow-scraping"
   },
@@ -20,7 +20,7 @@ const services = [
     title: "Web Applications",
     description: "High-performance editorial experiences and complex data-driven dashboards using Next.js and high-end animations.",
     icon: Code,
-    tags: ["React/Next.js", "GSAP/Framer", "Performance Optimization"],
+    tags: ["Next.js", "GSAP", "Motion", "Lenis"],
     price: "From $8k",
     projectLink: "/projects/care-connect"
   },
@@ -28,7 +28,7 @@ const services = [
     title: "Automation Engines",
     description: "Custom deployment pipelines and internal tooling that streamlines production workflows for engineering teams.",
     icon: Terminal,
-    tags: ["CI/CD", "Infrastructure as Code", "Custom CLI"],
+    tags: ["n8n", "WhatsApp API", "FastAPI", "Playwright"],
     price: "From $5k",
     projectLink: "/projects/whatsapp-ai-agent"
   },
@@ -36,7 +36,7 @@ const services = [
     title: "AI Integrations",
     description: "Integrating intelligent logic and machine learning models into existing ecosystems for predictive analytics and automation.",
     icon: Bot,
-    tags: ["LLM Fine-tuning", "RAG", "Predictive Modeling"],
+    tags: ["Pinecone", "OpenRouter", "RAG", "Agentic AI"],
     price: "From $15k",
     projectLink: "/projects/agrivaani-ai"
   },
@@ -52,7 +52,7 @@ export default function ServicesPage() {
             <motion.h1 
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-8xl md:text-[10rem] font-headline font-black tracking-tighter text-white leading-none mb-12"
+              className="text-8xl md:text-[10rem] font-headline font-black tracking-tighter text-white leading-none mb-12 uppercase"
             >
               SERVICES <br/><span className="text-primary italic">& CAPABILITIES</span>
             </motion.h1>
@@ -62,7 +62,7 @@ export default function ServicesPage() {
               transition={{ delay: 0.2 }}
               className="text-on-surface-variant text-xl md:text-2xl max-w-3xl mx-auto font-light leading-relaxed font-body"
             >
-              Transforming complex technical challenges into simplified, premium software solutions.
+              Transforming complex technical challenges into simplified, premium software solutions using a world-class engineering stack.
             </motion.p>
         </header>
 
