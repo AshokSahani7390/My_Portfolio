@@ -72,7 +72,7 @@ export default function AboutPage() {
         <section className="py-40 bg-surface-container-lowest">
           <div className="max-w-7xl mx-auto px-12">
             <h2 className="font-headline text-5xl font-black mb-24 text-center tracking-tighter">QUALIFICATIONS</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="flex flex-wrap justify-center gap-12">
               {[
                 { title: "B.Tech Software Engineering", subtitle: "Dr. A.P.J. Abdul Kalam Technical University, Lucknow", status: "", icon: "school" },
               ].map((item, i) => (
