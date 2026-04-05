@@ -74,9 +74,7 @@ export default function AboutPage() {
             <h2 className="font-headline text-5xl font-black mb-24 text-center tracking-tighter">QUALIFICATIONS</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {[
-                { title: "BSc Software Engineering", subtitle: "University of Technology", status: "GRADUATED WITH HONORS", icon: "school" },
-                { title: "AWS Certified Architect", subtitle: "Amazon Web Services", status: "PROFESSIONAL LEVEL", icon: "verified" },
-                { title: "Google Cloud Dev Pro", subtitle: "Google Professional Certs", status: "VALID THRU 2025", icon: "workspace_premium" },
+                { title: "B.Tech Software Engineering", subtitle: "Dr. A.P.J. Abdul Kalam Technical University, Lucknow", status: "", icon: "school" },
               ].map((item, i) => (
                 <motion.div
                   key={i}
