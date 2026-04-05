@@ -4,27 +4,27 @@ import { motion } from "framer-motion";
 
 const timelineItems = [
   {
-    period: "2022 — PRESENT",
-    title: "Senior Architectural Developer",
-    company: "Kinetic Solutions",
-    description: "Leading the digital transformation focusing on microservices and high-fidelity UI systems.",
-    tags: ["Kubernetes", "GoLang", "Next.js"],
+    period: "2025 — 2026",
+    title: "AI Solution Architect",
+    company: "Autonomous Product Development",
+    description: "Architecting high-scale AI systems and SaaS platforms using context-aware agentic workflows and vector-driven intelligence.",
+    tags: ["Antigravity", "ClaudeCode", "Pinecone", "OpenRouter"],
     current: true,
   },
   {
-    period: "2019 — 2022",
-    title: "Lead Full-Stack Engineer",
-    company: "FinTech Platform",
-    description: "Built and scaled a fintech platform from MVP to 100k+ active users, implementing secure transaction architectures.",
-    tags: ["React Native", "Python", "PostgreSQL"],
+    period: "2024 — 2025",
+    title: "Full-Stack Automation Lead",
+    company: "Digital Ecosystems",
+    description: "Building production-ready automation engines and secure communication systems with deep integration across WhatsApp and Email APIs.",
+    tags: ["Supabase", "n8n", "FastAPI", "Meta API"],
     current: false,
   },
   {
-    period: "2017 — 2019",
-    title: "UI/UX Designer & Dev",
-    company: "Creative Agency",
-    description: "A dual role bridge between aesthetics and implementation for a leading creative agency.",
-    tags: ["Figma", "Vue.js", "D3.js"],
+    period: "2023 — 2024",
+    title: "Product Engineer",
+    company: "SaaS Launchpad",
+    description: "Focused on high-performance web applications with real-time analytics, secure payment processing, and premium product monitoring.",
+    tags: ["Next.js", "Vercel", "Clerk", "Razorpay"],
     current: false,
   },
 ];
@@ -44,7 +44,7 @@ export default function Timeline() {
             </h2>
             <div className="h-1.5 w-24 bg-primary mb-10"></div>
             <p className="text-on-surface-variant font-body text-lg leading-relaxed max-w-sm">
-              Charting the evolution of architectural logic across diverse industries and complex challenges.
+              Charting the evolution of architectural logic across diverse industries and complex challenges from 2023 to 2026.
             </p>
           </motion.div>
         </div>
